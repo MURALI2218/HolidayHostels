@@ -29,10 +29,10 @@ from psycopg2.extras import RealDictCursor
 
 while True:
     try:
-        conn = psycopg2.connect(host='localhost', database = 'holidayhostels', user='postgres', password= '1234', cursor_factory=RealDictCursor)
+        conn = psycopg2.connect(host=f'{config.settings.database_hostname}', database = f'{config.settings.database_name}', user=f'{config.settings.database_username}', password= f'{config.settings.database_password}', cursor_factory=RealDictCursor)
         cursor = conn.cursor()
         print("connection successful")
         break
     except Exception as error:
         print(f"Connection UnSuccessful :: {error}")
-        time.sleep(5)
+        

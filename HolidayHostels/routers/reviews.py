@@ -12,8 +12,8 @@ def Review_system(vote : schemas.Vote, db : Session = Depends(database.get_db), 
                 models.Votes.hostel_id == vote.hostel_id, models.Votes.user_id == current_user.userid)
     
     vote_found = vote_query.first()
-   
     
+   
     if (vote.dir == 1):
         if vote_found:
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=f"{current_user.userid, current_user.username} : You Already Reviwed the Hostel : {vote.hostel_id}")

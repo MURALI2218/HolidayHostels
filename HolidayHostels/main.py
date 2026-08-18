@@ -5,6 +5,7 @@ from .routers import hostels, users, auth, reviews
 # models.Base.metadata.create_all(bind = engine)
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+
 origins = ['*']
 app.add_middleware(
     CORSMiddleware,
