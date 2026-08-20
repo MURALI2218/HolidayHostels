@@ -19,10 +19,9 @@ jobs:
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-
+        run: python -c "import sys; print(sys.version)
       - name:  update pip
-      - uses: python -m pip install --upgrade pip
+        run: python -m pip install --upgrade pip
       - name: test with pytest 
         run: |
           pip install pytest
