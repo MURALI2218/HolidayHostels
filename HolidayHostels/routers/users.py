@@ -5,8 +5,9 @@ from sqlalchemy.exc import IntegrityError
 from .. import utils, models, schemas,auth2
 router = APIRouter( tags=['Users'])
  
-@router.post("/createuser", status_code=status.HTTP_201_CREATED,response_model=schemas.user_Out )
+@router.post("/createuser/", status_code=status.HTTP_201_CREATED,response_model=schemas.user_Out )
 def createuser(user:schemas.User_Creation, db:Session =Depends(get_db)):
+
     hashed_password = utils.hash(user.password)
     user.password = hashed_password
     

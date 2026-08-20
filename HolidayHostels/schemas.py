@@ -38,9 +38,9 @@ class Hostels_Retrival(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 class User_Creation(BaseModel):
-    username : str 
-    emailid : EmailStr
-    password : str
+        username : str 
+        emailid : EmailStr
+        password : str
 
 
 

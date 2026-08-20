@@ -1,0 +1,10 @@
+version: "3"
+services:
+  api:
+    build: muralitharan2218/flaskapi-api
+    ports: 
+        - 80:8000
+
+    volumes:
+        - ./:/usr/src/app:ro
+    command: uvicorn HolidayHostels.main:app --host 0.0.0.0 --port 8000 
