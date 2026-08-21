@@ -8,7 +8,9 @@ jobs:
     environment: appcreds
     env: 
       
-      DATABASE_HOSTNAME: ${secrets.DATABASE_HOSTNAME}}
+
+    
+      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
       DATABASE_NAME: ${{secrets.DATABASE_NAME}}
@@ -16,8 +18,6 @@ jobs:
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: 30
-    
-
     steps:
       - uses: actions/checkout@v6
       - name: Set up Python
