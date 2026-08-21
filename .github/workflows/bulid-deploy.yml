@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     environment: appcreds
     env: 
-      SECRET_KEY: ${{secrets.SECRET_KEY}}
-      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
+      SECRET_KEY: ${{SECRET_KEY}}
+      DATABASE_HOSTNAME: ${{DATABASE_HOSTNAME}}
       DATABASE_PORT: 5432
-      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
-      DATABASE_NAME: ${{secrets.DATABASE_NAME}}
-      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
-      ALGORITHM: ${{secrets.ALGORITHM}}
+      DATABASE_PASSWORD: ${{DATABASE_PASSWORD}}
+      DATABASE_NAME: ${{DATABASE_NAME}}
+      DATABASE_USERNAME: ${{DATABASE_USERNAME}}
+      ALGORITHM: ${{ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: 30
     
 
