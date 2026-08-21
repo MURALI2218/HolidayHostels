@@ -4,21 +4,22 @@ on: [push]
 
 jobs:
   build1:
-  - name: Check environment variables
+    
+    
     environment: appcreds
-      
+    
     run: |
-      if [ -n "$DATABASE_PORT" ]; then
-        echo "DATABASE_PORT is set"
-      else
-      echo "DATABASE_PORT is EMPTY"
-      fi
+        if [ -n "$DATABASE_PORT" ]; then
+          echo "DATABASE_PORT is set"
+        else
+        echo "DATABASE_PORT is EMPTY"
+        fi
 
-      if [ -n "$ACCESS_TOKEN_EXPIRE_MINUTES" ]; then
-        echo "ACCESS_TOKEN_EXPIRE_MINUTES is set"
-      else
-        echo "ACCESS_TOKEN_EXPIRE_MINUTES is EMPTY"
-      fi
+        if [ -n "$ACCESS_TOKEN_EXPIRE_MINUTES" ]; then
+          echo "ACCESS_TOKEN_EXPIRE_MINUTES is set"
+        else
+          echo "ACCESS_TOKEN_EXPIRE_MINUTES is EMPTY"
+        fi
     env: 
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
