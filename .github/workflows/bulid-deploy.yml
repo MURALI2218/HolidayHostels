@@ -8,12 +8,12 @@ jobs:
     env: 
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
-      DATABASE_PORT: ${{secrets.DATABASE_PORT}}
+      DATABASE_PORT: 5432
       DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
       DATABASE_NAME: ${{secrets.DATABASE_NAME}}
       DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
       ALGORITHM: ${{secrets.ALGORITHM}}
-      ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
     runs-on: ubuntu-latest
 
     steps:
