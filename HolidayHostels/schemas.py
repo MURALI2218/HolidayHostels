@@ -32,7 +32,9 @@ class Hostels_Retrival(BaseModel):
     created_at : datetime
     hostelname : str
     city : str
-    owner : user_Out
+    owner : user_Out 
+    allowanceperday : float
+    urgentrecruitment : bool
     Reviews : Optional[int] = None
     
     model_config = ConfigDict(from_attributes=True)

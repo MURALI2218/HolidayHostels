@@ -27,9 +27,10 @@ async def all_hostels(db : Session = Depends(get_db),
         "hostelname" : hostel.hostelname,
         "hostelid": hostel.hostelid,
         "created_at": hostel.created_at,
-        "user_id": hostel.user_id,
-        "owner": hostel.owner,
-        "Reviews": reviews
+        "allowanceperday":hostel.allowanceperday,
+        "urgentrecruitment":hostel.urgentrecruitment,
+        "Reviews": reviews,
+         "owner": hostel.owner
     })
    
    return  result
